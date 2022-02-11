@@ -35,7 +35,7 @@ public class OrderService {
 
         OrderEntity entity = null;
         try {
-            OrderEntity entity = orderRepo.save(mapper.toEntity(order));
+            entity = orderRepo.save(mapper.toEntity(order));
         } catch (StaleObjectStateException e) {
 
         }
